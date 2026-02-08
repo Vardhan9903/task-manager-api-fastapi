@@ -9,11 +9,42 @@ A simple Task Manager REST API built with Python and FastAPI.
 - Complete task
 - Delete task
 
-## How to Run
+## 📁 Project Structure
 
-```bash
-pip install -r requirements.txt
-uvicorn main:app --reload
+task-manager-api-fastapi/
+├── main.py
+├── requirements.txt
+├── README.md
+└── LICENSE
 
-open:
-http://127.0.0.1:8000/docs
+## API Endpoints
+
+| Method | Endpoint        | Description          |
+|--------|-----------------|----------------------|
+| POST   | /tasks/         | Create a new task    |
+| GET    | /tasks/         | Get all tasks        |
+| GET    | /tasks/{id}     | Get task by ID       |
+| PUT    | /tasks/{id}     | Update task by ID    |
+| DELETE | /tasks/{id}     | Delete task by ID    |
+
+## How to Run Locally
+
+1. Clone the repository:
+   git clone https://github.com/Vardhan9903/task-manager-api-fastapi.git
+
+2. Navigate into project:
+   cd task-manager-api-fastapi
+
+3. Create virtual environment:
+   python -m venv venv
+
+4. Activate virtual environment:
+   venv\Scripts\activate   (Windows)
+   source venv/bin/activate (Mac/Linux)
+
+5. Install dependencies:
+   pip install -r requirements.txt
+
+6. Run the server:
+   uvicorn main:app --reload
+
